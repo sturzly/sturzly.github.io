@@ -1,0 +1,145 @@
+<html lang="en"><head><meta charset="UTF-8">
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>this is a virus</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: black;
+      overflow: hidden;
+    }
+
+    #video-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #video-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 48px;
+      text-align: center;
+      animation: pulse-text-network 2s infinite;
+    }
+
+    #play-text {
+      position: absolute;
+      top: 35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 24px;
+      text-align: center;
+      opacity: 1;
+    }
+
+    @keyframes pulse-text-mitigated {
+      0%, 100% {
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.7),
+                     0 0 20px rgba(0, 0, 255, 0.7),
+                     0 0 30px rgba(0, 0, 255, 0.7),
+                     0 0 40px rgba(75, 0, 130, 0.7),
+                     0 0 50px rgba(75, 0, 130, 0.7),
+                     0 0 60px rgba(75, 0, 130, 0.7),
+                     0 0 70px rgba(75, 0, 130, 0.7);
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        text-shadow: 0 0 10px rgba(0, 0, 255, 0.8),
+                     0 0 20px rgba(0, 0, 255, 0.8),
+                     0 0 30px rgba(0, 0, 255, 0.8),
+                     0 0 40px rgba(75, 0, 130, 0.8),
+                     0 0 50px rgba(75, 0, 130, 0.8),
+                     0 0 60px rgba(75, 0, 130, 0.8),
+                     0 0 70px rgba(75, 0, 130, 0.8);
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+
+    @keyframes pulse-text-network {
+      0%, 100% {
+    text-shadow: 0 0 10px rgba(255, 20, 147, 0.7),
+                         0 0 20px rgba(255, 20, 147, 0.7),
+                         0 0 30px rgba(255, 20, 147, 0.7),
+                         0 0 40px rgba(255, 105, 180, 0.7),
+                         0 0 50px rgba(255, 105, 180, 0.7),
+                         0 0 60px rgba(255, 105, 180, 0.7),
+                         0 0 70px rgba(255, 182, 193, 0.7);
+
+        transform: translate(-50%, -50%) scale(1);
+      }
+      50% {
+        text-shadow: 0 0 10px rgba(255, 20, 147, 0.7),
+                         0 0 20px rgba(255, 20, 147, 0.7),
+                         0 0 30px rgba(255, 20, 147, 0.7),
+                         0 0 40px rgba(255, 105, 180, 0.7),
+                         0 0 50px rgba(255, 105, 180, 0.7),
+                         0 0 60px rgba(255, 105, 180, 0.7),
+                         0 0 70px rgba(255, 182, 193, 0.7);
+
+        transform: translate(-50%, -50%) scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="video-container">
+    <video id="video" src="https://raw.githubusercontent.com/n1xsec/sweet/main/bladf.mp4" onclick="playVideo()"></video>
+    <div id="play-text">Click to play!</div>
+    <div id="video-overlay" style="animation: pulse-text-network 2s infinite;">tsua<span style="color: inherit; animation: pulse-text-network 2s infinite;"> beamed u :3</span></div>
+  </div>
+  <script>
+
+    // Play video
+    function playVideo() {
+      video.play()
+        .catch(error => {
+          console.error('Error playing video:', error);
+        });
+
+      playText.style.display = 'none';
+    }
+    // Pause video
+    function pauseVideo() {
+      video.pause()
+        .catch(error => {
+          console.error('Error pausing video:', error);
+        });
+      playText.style.display = 'block';
+    }
+    function hideElement() {
+      const playTextElement = document.getElementById('play-text');
+      playTextElement.style.display = 'none';
+    }
+
+    document.body.addEventListener('click', hideElement);
+
+    video.addEventListener('play', playVideo);
+    video.addEventListener('pause', pauseVideo);
+
+  </script>
+
+
+
+
+</body></html>
